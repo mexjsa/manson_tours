@@ -243,7 +243,8 @@ a {
 .carousel-card {
     width: 350px;
     height: 500px;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
     border-radius: 8px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);

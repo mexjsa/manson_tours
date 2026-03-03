@@ -204,9 +204,10 @@ a {
     height: 100%;
 }
 
-/* Tours Grid */
-.tours-section {
-    padding: 6rem 5%;
+/* Reviews Carousel Section */
+.reviews-section {
+    padding: 6rem 0;
+    overflow: hidden;
 }
 
 .section-title {
@@ -216,71 +217,54 @@ a {
     margin-bottom: 4rem;
 }
 
-.tours-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+.carousel-container {
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    padding: 1rem 0;
 }
 
-.tour-card {
+/* 
+ * The track holds 14 items (7 original + 7 duplicate). 
+ * Each item has a width (e.g., 350px) + gap.
+ * We'll use CSS keyframes to scroll from 0 to -50% of its width.
+ */
+.carousel-track {
+    display: flex;
+    width: max-content;
+    gap: 2rem;
+    animation: scroll 40s linear infinite;
+}
+
+.carousel-track:hover {
+    animation-play-state: paused;
+}
+
+.carousel-card {
+    width: 350px;
     height: 500px;
     background-size: cover;
     background-position: center;
-    position: relative;
     border-radius: 8px;
-    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    flex-shrink: 0;
     transition: transform 0.4s ease;
 }
 
-.tour-card:hover {
-    transform: translateY(-10px);
+.carousel-card:hover {
+    transform: scale(1.02);
 }
 
-.tour-overlay {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.2) 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 2rem;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
 
-.tour-card:hover .tour-overlay {
-    opacity: 1;
-}
+    100% {
+        transform: translateX(calc(-50% - 1rem));
+    }
 
-.tour-overlay h3 {
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #fff;
-}
-
-.tour-overlay p {
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
-    color: #ddd;
-}
-
-.btn-secondary {
-    display: inline-block;
-    border: 1px solid var(--accent);
-    color: #fff;
-    padding: 0.5rem 1rem;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    border-radius: 4px;
-}
-
-.btn-secondary:hover {
-    background: var(--accent);
+    /* -50% of totally track width minus half of total gap */
 }
 
 /* Footer */

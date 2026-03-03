@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manson Tours | Cultura e Historia de la CDMX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">MANSON<span class="logo-accent">TOURS</span></a>
+        </div>
+        <div class="nav-links">
+            <a href="#about" data-i18n="nav_about">Sobre Mí</a>
+            <a href="#tours" data-i18n="nav_tours">Recorridos</a>
+            <a href="#contact" data-i18n="nav_contact" class="btn-contact">Contacto</a>
+            <div class="lang-switcher">
+                <select id="languageSelect">
+                    <option value="es">ES</option>
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
+                    <option value="de">DE</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <!-- Using enhanced_tour_1 as background -->
+        <div class="hero-content">
+            <h1 data-i18n="hero_title">Storytelling Matters. Porque las narrativas que elegimos deciden nuestra
+                historia.</h1>
+            <p data-i18n="hero_subtitle">Descubre la metamorfosis de la Ciudad de México con Alejandro "Aristóteles"
+                Ruiz.</p>
+            <a href="https://wa.me/5215538250172" target="_blank" class="btn-primary" data-i18n="hero_cta">Únete a la
+                Aventura</a>
+        </div>
+    </header>
+
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-text">
+                <h2 data-i18n="about_title">¿Quién es Aristóteles?</h2>
+                <p data-i18n="about_p1">Alejandro Ruiz, conocido en el gremio como "Aristóteles", no es solo un guía de
+                    turistas; es un intérprete del patrimonio y un contador de historias.</p>
+                <p data-i18n="about_p2">Su misión es mostrar la Ciudad de México no como un simple escenario de
+                    monumentos, sino como un organismo vivo lleno de historia, sincretismo arquitectónico y crónicas de
+                    la vida cotidiana.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="tours" class="tours-section">
+        <h2 class="section-title" data-i18n="tours_title">Mis Recorridos</h2>
+        <div class="tours-grid">
+            <!-- Tour 1 -->
+            <div class="tour-card" style="background-image: url('assets/images/enhanced_tour_2_1772516957936.png');">
+                <div class="tour-overlay">
+                    <h3 data-i18n="tour1_title">Templo Mayor y Sincretismo</h3>
+                    <p data-i18n="tour1_desc">Aprende a identificar cómo las piedras de los templos aztecas construyeron
+                        los palacios coloniales.</p>
+                    <a href="https://wa.me/5215538250172" class="btn-secondary" data-i18n="tour_btn">Reservar</a>
+                </div>
+            </div>
+            <!-- Tour 2 -->
+            <div class="tour-card" style="background-image: url('assets/images/enhanced_tour_3_1772516973886.png');">
+                <div class="tour-overlay">
+                    <h3 data-i18n="tour2_title">Oficios y Vida Cotidiana</h3>
+                    <p data-i18n="tour2_desc">Desde los evangelistas en Santo Domingo hasta la gastronomía auténtica
+                        (maíz y chile) en lugares no comerciales.</p>
+                    <a href="https://wa.me/5215538250172" class="btn-secondary" data-i18n="tour_btn">Reservar</a>
+                </div>
+            </div>
+            <!-- Tour 3 -->
+            <div class="tour-card" style="background-image: url('assets/images/enhanced_tour_4_1772517031127.png');">
+                <div class="tour-overlay">
+                    <h3 data-i18n="tour3_title">Leyendas de la Inquisición</h3>
+                    <p data-i18n="tour3_desc">Recorre las calles más antiguas de América y descubre los mitos populares
+                        del centro histórico.</p>
+                    <a href="https://wa.me/5215538250172" class="btn-secondary" data-i18n="tour_btn">Reservar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="footer-content">
+            <h2 data-i18n="footer_title">Comienza tu viaje</h2>
+            <p data-i18n="footer_text">Escríbeme por WhatsApp y personalicemos tu experiencia en la CDMX.</p>
+            <a href="https://wa.me/5215538250172" target="_blank" class="whatsapp-link">
+                <svg class="wa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path fill="currentColor"
+                        d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-23.1-115-65.1-157zM223.9 414.8c-33.1.1-65.6-8.9-94-25.8l-6.7-4-69.8 18.3L72 334.8l-4.4-7c-18.5-29.4-28.2-63.4-28.2-98.8C39.4 126.9 126.3 40 234.3 40c52.2 0 101.4 20.3 138.3 57.2 36.9 36.9 57.2 86 57.2 138.3 0 108.6-88.5 195.5-197.8 195.5l-8.1 3.8zM332.2 278c-6-3-35.4-17.5-40.9-19.5-5.5-2-9.4-3-13.4 3-4 5.9-15.4 19.5-18.9 23.4-3.5 3.9-7 4.5-12.9 1.5-6-3-25.3-9.3-48.2-29.9-17.8-16-29.8-35.8-33.3-41.8-3.5-6-.4-9.3 2.6-12.3 2.7-2.7 6-7 9-10.4 3-3.4 4-5.9 6-9.9 2-4 1-7.4-.5-10.4-1.5-3-13.4-32.3-18.4-44.2-4.9-11.6-9.8-10-13.4-10.2-3.4-.2-7.4-.2-11.4-.2-4 0-10.4 1.5-15.9 7.4-5.4 5.9-20.9 20.4-20.9 49.8s21.4 57.7 24.4 61.6c3 3.9 42 64.2 101.7 89.9 14.2 6.1 25.3 9.8 33.9 12.5 14.3 4.5 27.3 3.9 37.6 2.4 11.5-1.7 35.4-14.5 40.4-28.5 5-14.1 5-26.1 3.5-28.6-1.4-2.5-5.4-4-11.4-7z" />
+                </svg>
+                +52 1 55 3825 0172
+            </a>
+            <p class="copyright">&copy; 2026 Manson Tours. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
